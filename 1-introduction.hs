@@ -133,11 +133,6 @@ yawn = head $ map (*2) [x | x <- [1..], x `mod` 7 > 4]
 
 -- }
 
--- { Tuples
--- like fixed sized lists, and the types can differ
-
--- }
-
 -- { Urgh, lets do somthing more interesting
 
 -- Types?
