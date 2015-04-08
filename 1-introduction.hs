@@ -2,11 +2,12 @@
 
 module Introduction where
 
--- { Hello World
-
+import Data.List
 import Data.Char
 
-hello = map $ chr . (+13) . ord
+-- { Hello World
+
+hello = map (chr . (+13) . ord)
 
 world = ";X__b\DC3TaW\DC3JX_Vb`X\DC3gb\DC3g[X\DC3;Tf^X__\DC3fghWl\DC3Zebhc\DC3 \DC3cTeg\DC3baX\DC4"
 
@@ -21,8 +22,9 @@ factorial n = n * factorial (n-1)
 -- Dont worry about any of the syntax yet, we'll get to that soon
 
 -- you cant re-define things
--- a = 1
+
 -- a = 2
+-- a = 1
 
 -- in pure haskell there are no side effects
 -- (referential transparrency)
@@ -48,8 +50,7 @@ everyPositiveInteger = [1..]
 
 -- { Calling Functions
 
--- succ 5
--- succ 'a'
+b = succ 'a'
 
 -- min max
 
@@ -60,8 +61,8 @@ everyPositiveInteger = [1..]
 -- }
 
 -- { Defining Functions
-doubleMe x = x + x
 
+doubleMe x = x + x
 doubleUs x y = doubleMe x + doubleMe y
 
 -- If
@@ -81,7 +82,7 @@ helloConcat = 'h':'e':'l':'l':'o':' ':'w':'o':'r':'l':'d':[]
 -- Actually [1,2,3] is syntatic sugar
 
 -- Accessing a list
-five = someNums !! 2
+seven = someNums !! 2
 
 -- Strings are just lists of characters
 hiya = "Hello " ++ "World"
@@ -129,7 +130,7 @@ devil = replicate 3 6
 -- A way to construct & transform & filter lists
 
 -- Oh btw, still lazy
-yawn = head $ map (*2) [x | x <- [1..], x `mod` 7 > 4]
+yawn = head (map (*2) [x | x <- [1..], x `mod` 7 > 4])
 
 -- }
 
