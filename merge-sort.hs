@@ -1,7 +1,5 @@
 module MergeSort where
 
--- Merge sort by edd
-
 sort :: Ord a => [a] -> [a]
 sort [] = []
 sort [x] = [x]
